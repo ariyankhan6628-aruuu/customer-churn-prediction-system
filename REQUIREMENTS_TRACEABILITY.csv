@@ -1,0 +1,19 @@
+Requirement ID,Deliverable,Verification method,Status in handover package
+FR-01,Data CSV + notebook 01,Run EDA notebook with local CSV,Requires local dataset
+FR-02,Notebook 01,Review generated summary tables,Included notebook; run locally
+FR-03,Notebook 01 and reports/figures,Confirm 6-10 visuals after run,Notebook includes plotting workflow; generated figures depend on local data
+FR-04,Notebook 02 and src/features/build_features.py,Review missing-value and leakage steps,Included
+FR-05,Notebook 02 and src/utils/prepare_data.py,Check split counts/seed,Included
+FR-06,src/features/build_features.py,Fit-transform test,Included
+FR-07,Notebook 03 and src/models/train.py,Inspect baseline metrics/plots,Included existing workflow
+FR-08,Notebook 04 and src/models/train.py,Inspect comparison CSV and threshold,Included; rerun for fresh artifacts
+FR-09,Training workflow,Verify validation selection precedes test evaluation,Included workflow narrative
+FR-10,models/churn_model.joblib,Check file after training,Generated locally; not bundled
+FR-11,Notebook 05 and retention strategies,Check four SHAP plots and three strategies,Notebook workflow included; plots require local run
+FR-12,src/pipeline/batch_score.py,Run batch score and inspect output,Included
+FR-13,src/serving/app.py,GET /health and POST /predict,Included
+FR-14,app_ui/streamlit_app.py,Manual UI test,Included
+FR-15,src/monitoring/drift_report.py,Generate HTML/CSV report,Included; requires reference/current CSVs
+FR-16,Monitoring runbook and PowerShell helper,Configure Windows Task Scheduler,Instructions included; scheduling must be configured on user's PC
+FR-17,README and requirements specification,Documentation review,Included
+FR-18,PPTX and demo script,Open slide deck and rehearse demo,Included
